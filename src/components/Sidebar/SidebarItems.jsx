@@ -17,7 +17,7 @@ export const SidebarItems = () => {
         {
             name: 'Contact',
             link: 'Rcontact',
-            classname: 'border-b',
+            classname: true,
         },
     ]
 
