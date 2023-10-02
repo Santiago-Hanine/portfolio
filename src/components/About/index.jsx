@@ -12,7 +12,7 @@ export const About = () => {
         console.log(saveSkill.experience)
     }
       return (
-    <div id="about" className="md:h-[60vh] h-screen w-full md:mt-24 ">
+    <div id="about" className=" w-full md:mt-24 ">
         
         <h2 className="mb-24 relative lg:mb-44 text-center text-6xl tracking-wider text-white font-kanit uppercase  after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg"> About me </h2>
         
