@@ -5,7 +5,7 @@ import { SidebarItems } from './SidebarItems'
 
 export const Sidebar = () => {
   return (
-        <div className='fixed left-0 w-28 h-screen border-r-4 border-strong-blue hidden lg:flex flex-col items-center justify-around gap-16 z-50 '>
+        <div className='fixed left-0 w-28 h-screen border-r-4 border-skill-card hidden lg:flex flex-col items-center justify-around gap-16 z-50 '>
             <div>
                 <a href="/">
                     <img className='w-full h-full object-cover' src="./logo.png" alt="" />
@@ -15,8 +15,8 @@ export const Sidebar = () => {
 
             <div className='flex flex-col  w-full'>
                 {SidebarItems().map(item => (
-                    <div key={item.name} className={`${item.classname ? 'border-b-strong-blue border-b-2' : ''} border-t-strong-blue border-t-2 w-full h-20 flex items-center justify-center`}>
-                        <a href={item.link} className='text-white text-center text-xl'>{item.name}</a>
+                    <div key={item.name} className={`${item.classname ? 'border-b-skill-card  border-b-2' : ''} border-t-skill-card border-t-2 w-full h-20 flex items-center justify-center`}>
+                        <a href={item.link} className='text-white font-kanit uppercase tracking-wider text-center text-lg'>{item.name}</a>
                     </div>
                 ))}
             </div>

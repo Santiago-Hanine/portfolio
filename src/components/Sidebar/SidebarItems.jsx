@@ -3,12 +3,12 @@ import React from 'react'
 export const SidebarItems = () => {
     const sidebarItems = [
         {
-            name: 'About Me',
-            link: '#about'
+            name: 'Home',
+            link: '#home'
         },
         {
-            name: 'Skills',
-            link: '#skills'
+            name: 'About',
+            link: '#about'
         },
         {
             name: 'Projects',
