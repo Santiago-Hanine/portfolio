@@ -13,7 +13,6 @@ export const Header = () => {
       const onScroll = () => {
         if (window.scrollY > 62) {
           setScrolled(true);
-          onMenu()
         } else {
           setScrolled(false);
         }
