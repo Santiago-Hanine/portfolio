@@ -1,7 +1,10 @@
 import { useState } from "react"
 import { Skills } from "./Skills"
 import {RxCross2} from 'react-icons/rx'
+
+
 export const About = () => {
+
 
     const [showDescription, setShowDescription] = useState(false)
     const [saveSkill, setSaveSkill] = useState({})
@@ -9,12 +12,13 @@ export const About = () => {
     const handleOpen = (skill) => {
         setSaveSkill(skill)
         setShowDescription(true)
-        console.log(saveSkill.experience)
     }
       return (
-    <div id="about" className=" w-full md:mt-24 ">
+        <div id="about" className="w-screen bg-skill-card md:py-36 py-12">
+            
+    <div className="flex flex-col items-center max-w-[80%] lg:max-w-[80%] lg:pl-28 justify-center mx-auto">
         
-        <h2 className="mb-24 relative lg:mb-44 text-center text-6xl tracking-wider text-white font-kanit uppercase  after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg"> About me </h2>
+        <h2 className="mb-24 relative lg:mb-36 text-center text-6xl tracking-wider text-white font-kanit uppercase  after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg"> About me </h2>
         
         <div className="grid md:grid-cols-2 grid-cols-1 gap-x-48">
             
@@ -31,23 +35,28 @@ export const About = () => {
                 </a>
             </div>
 
-            <div className="flex flex-col relative justify-start gap-6 ">
+            <div  className="flex flex-col relative justify-start gap-6">
                 <h2 className="text-4xl text-white font-kanit">My Skills</h2>
 
                 <div className="flex flex-wrap gap-6 w-full">
                     {Skills().map(item => (
-                        <div onClick={() => handleOpen(item)} className="bg-skill-card cursor-pointer p-3  rounded-md " key={item.name}>
+                        <div
+                         onClick={() => handleOpen(item)} 
+                         className="bg-skill-card cursor-pointer p-3  rounded-md " 
+                         key={item.name}>
                             <h3 className="text-white">{item.name}</h3>
-
                         </div>
                     ))}
                 </div>
                     {showDescription &&
-                        <div className="bg-skill-card w-full h-max p-3 relative">
+                         <div 
+                         
+
+                            className="bg-skill-card w-full h-max p-3 relative">
                             <h3 className={`text-strong-blue font-kanit text-2xl`}>{saveSkill.name}</h3>
                             <p className="text-white font-kanit text-lg pb-4">{saveSkill.description}</p>
-                            <p className="text-white font-kanit text-sm pb-2">Experience</p>
-                            <div className={`${saveSkill.experience == '2 Years' ? 'bg-green-500 w-3/4' : 'bg-orange-500 w-1/2'} absolute bottom-3 h-1`}>
+                            <p className="text-white font-kanit text-sm pb-2">Experience: {saveSkill.experience == 1 ? '1 Year' : '2 Years'}</p>
+                            <div className={`${saveSkill.experience == 2 ? 'bg-green-500 w-3/4' : 'bg-orange-500 w-2/4'} absolute bottom-3 h-1`}>
                             </div>
                             <div onClick={() => setShowDescription(false)} className=" cursor-pointer absolute top-2 right-2">
                                 <RxCross2 className="aboslute text-strong-blue h-8 w-8"/>
@@ -58,6 +67,7 @@ export const About = () => {
             </div>
 
         </div>
+    </div>
     </div>
   )
 }

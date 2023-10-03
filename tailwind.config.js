@@ -29,6 +29,14 @@ export default {
           '50%': {'border-right-color': 'white'},
           'to': {'border-right-color': 'transparent'}
         },
+        menuAppear:{
+          'from': { 'opacity': 0,},
+          'to': {'opacity': 1}
+        },
+        menuDisappear:{
+          'from': { 'opacity': 1,},
+          'to': {'opacity': 0}
+        },
       }
     },
     fontFamily: {

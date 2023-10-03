@@ -14,11 +14,18 @@ const projects = [
         link:'https://santiago-hanine.github.io/portfolio/',
     },
     {
+        name: 'Shopi',
+        description: 'I created a Shop Ecommerce where you can shop for a wide range of products with ease and speed. Enjoy a modern, responsive, and intuitive shopping experience.',
+        img: './Shopi.jpeg',
+        link:'https://github.com/Santiago-Hanine/Shop-Ecommerce',
+    },
+    {
         name: 'Todo List',
         description: 'This TodoList is a project that I developed during my journey of learning React.js, an influential JavaScript library for building interactive user interfaces. The project revolves around creating a personalized and feature-rich todo list application that showcases my progress and skills as I delved into the world of React.js development.',
         img: './TodoList.png',
         link:'https://santiago-hanine.github.io/Shop-Hanine/',
     },
+
 ]
 
 export const ProjectList = () => {

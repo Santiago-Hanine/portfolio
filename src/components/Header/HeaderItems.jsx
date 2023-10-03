@@ -1,7 +1,7 @@
-import React from 'react'
 
-export const SidebarItems = () => {
-    const sidebarItems = [
+export const HeaderItems = () => {
+    const headerItems = [
+
         {
             name: 'Home',
             link: '/'
@@ -21,5 +21,5 @@ export const SidebarItems = () => {
         },
     ]
 
-    return sidebarItems;
+    return headerItems;
 }
