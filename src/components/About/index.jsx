@@ -18,15 +18,15 @@ export const About = () => {
             
     <div className="flex flex-col items-center max-w-[80%] lg:max-w-[80%] lg:pl-28 justify-center mx-auto">
         
-        <h2 className="mb-24 relative lg:mb-36 text-center text-6xl tracking-wider text-white font-kanit uppercase  after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg"> About me </h2>
+        <h2 className="mb-24 relative lg:mb-36 text-center md:text-6xl text-5xl tracking-wider text-white font-kanit uppercase  after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg"> About me </h2>
         
         <div className="grid md:grid-cols-2 grid-cols-1 gap-x-48">
             
             <div className="mb-20 md:mb-0 flex flex-col gap-6 max-w-[100%]">
-                <h2 className="text-4xl font-kanit text-white">Get to know me!</h2>
-                <p className="text-white lg:w-full font-kanit text-xl leading-7">
+                <h2 className="md:text-4xl text-3xl font-kanit text-white">Get to know me!</h2>
+                <p className="text-white lg:w-full font-kanit text-lg leading-7">
                 I'm a <span className="text-strong-blue">Frontend Web Developer</span>  building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the <span className="text-strong-blue">Projects</span> section.</p>
-                <p className="text-white lg:w-full font-kanit text-xl leading-7">
+                <p className="text-white lg:w-full font-kanit text-lg leading-7">
                     My coding arsenal includes a diverse set of tools and languages, but my true superpower lies in turning concepts into captivating user experiences. From HTML to CSS, JavaScript and React to Php, I'm constantly learning and evolving to stay at the forefront of web development trends.
                 </p>
 
@@ -36,7 +36,7 @@ export const About = () => {
             </div>
 
             <div  className="flex flex-col relative justify-start gap-6">
-                <h2 className="text-4xl text-white font-kanit">My Skills</h2>
+                <h2 className="md:text-4xl text-3xl text-white font-kanit">My Skills</h2>
 
                 <div className="flex flex-wrap gap-6 w-full">
                     {Skills().map(item => (

@@ -11,7 +11,7 @@ const projects = [
         name: 'Portfolio ',
         description: 'My React and Vite-powered portfolio is a showcase of my web development expertise, where I have applied all my knowledge. It is a dynamic, fast, and interactive display of my skills and achievements.',
         img: './portfolio.png',
-        link:'https://santiago-hanine.github.io/portfolio/',
+        link:'https://santiago-hanine.vercel.app/',
     },
     {
         name: 'Shopi',

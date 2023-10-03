@@ -5,7 +5,7 @@ export const Projects = () => {
 
   return (
     <div id='projects' className='flex flex-col items-center max-w-[90%] lg:max-w-[80%] lg:pl-28 justify-center mx-auto py-24'>
-        <h2 className='uppercase text-center font-kanit tracking-wider text-white text-6xl relative after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg mb-20'>Projects</h2>
+        <h2 className='uppercase text-center font-kanit tracking-wider text-white md:text-6xl text-5xl relative after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg mb-20'>Projects</h2>
 
         <p className='text-center text-white text-lg font-kanit max-w-[70%] mx-auto'>Here you will find some of the personal and clients projects that I created with each project containing its own case study</p>
 
