@@ -14,7 +14,7 @@ export const About = () => {
         setShowDescription(true)
     }
       return (
-        <div id="about" className="w-screen bg-skill-card md:py-36 py-12">
+        <div id="about" className="w-screen bg-skill-card md:py-32 py-12">
             
     <div className="flex flex-col items-center max-w-[80%] lg:max-w-[80%] lg:pl-28 justify-center mx-auto">
         

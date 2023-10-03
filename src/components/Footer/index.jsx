@@ -4,7 +4,7 @@ import {AiFillLinkedin} from 'react-icons/ai'
 export const Footer = () => {
   return (
     <div className='bg-black w-screen'>
-      <div className=' relative h-80 lg:h-96 flex flex-col gap-8 lg:gap-20 py-10 px-6 max-w-[90%] lg:max-w-[70%] lg:pl-28 justify-center mx-auto '>
+      <div className=' relative h-92 lg:h-96 flex flex-col gap-8 lg:gap-20 py-10 px-6 max-w-[90%] lg:max-w-[70%] lg:pl-28 justify-center mx-auto '>
       
       <div className='flex flex-col-reverse lg:flex-row gap-8 lg:justify-between'>
 
