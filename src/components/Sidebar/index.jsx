@@ -8,7 +8,7 @@ export const Sidebar = () => {
         <div className='fixed left-0 top-0 w-28 h-screen border-r-4 bg-black-bg border-skill-card hidden lg:flex flex-col items-center justify-around gap-16 z-50 '>
             <div>
                 <a href="/">
-                    <img className='w-full h-full object-cover' src="./logo.png" alt="" />
+                    <img className='w-full h-full object-cover' src="./logo.webp" alt="" />
                 </a>
             </div>
 

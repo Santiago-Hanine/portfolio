@@ -9,7 +9,7 @@ export const Presentation = () => {
                 <h1 className=' lg:ml-24 text-strong-blue font-primary lg:text-8xl md:text-6xl text-5xl'>Santiago Hanine</h1>
             </div>
 
-            <img className='mt-6 xl:h-[30rem] lg:h-[22rem] object-cover' src="./foto.png" alt="Avatar" />
+            <img className='mt-6 xl:h-[30rem] lg:h-[22rem] object-cover' src="./foto.webp" alt="Avatar" />
 
         </div>
 
