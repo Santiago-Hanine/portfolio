@@ -16,7 +16,7 @@ export const Projects = () => {
                   <div className="flex flex-col items-center lg:items-start gap-6 bg-skill-card p-4 w-full">
                       <h2 className="text-white text-3xl lg:text-4xl font-kanit">{project.name}</h2>
                       <p className="font-kanit lg:text-lg text-base text-center lg:text-left text-white w-full">{project.description}</p> 
-                      <a target="_blank" className="text-white bg-strong-blue w-fit p-2 rounded-md tracking-wider font-kanit text-lg" href={project.link}>See the Project... </a>
+                      <a target="_blank" className="text-white bg-strong-blue w-fit p-2 rounded-md tracking-wider font-kanit text-lg" href={project.link}>See the Code... </a>
                   </div>
               </div>
             ))}
