@@ -13,7 +13,9 @@ export default {
         'skill-card': 'rgba(153,153,153,.2)'
       },
       animation:{
-        type: 'typing 1.5s steps(40,end), blink 1s step-end infinite'
+        type: 'typing 1.5s steps(40,end), blink 1s step-end infinite',
+        menuAppear: 'menuAppear .5s ease-in-out',
+        menuDisappear: 'menuDisappear .5s ease-in-out',
       },
       keyframes: {
         scroll:{
@@ -30,12 +32,12 @@ export default {
           'to': {'border-right-color': 'transparent'}
         },
         menuAppear:{
-          'from': { 'opacity': 0,},
-          'to': {'opacity': 1}
+          from: { opacity: 0, transform: 'translateY(-10px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
         },
         menuDisappear:{
-          'from': { 'opacity': 1,},
-          'to': {'opacity': 0}
+          from: { opacity: 1, transform: 'translateY(0px)' },
+          to: { opacity: 0, transform: 'translateY(-10px)' },
         },
       }
     },
