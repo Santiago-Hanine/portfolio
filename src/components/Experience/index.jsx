@@ -11,9 +11,9 @@ export const Experience = () => {
             <ol class="relative border-s border-gray-200 ml-3"> 
             
             {list().map((item, index) => (
-                <li class="mb-10 ms-4"> 
+                <li key={index} class="mb-10 ms-4"> 
             
-            <div key={index} class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-strong-blue bg-strong-blue">
+            <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-strong-blue bg-strong-blue">
                 </div> 
                 <time class="mb-1 text-sm font-normal leading-none text-white/80">{item.date}</time> 
                 <h3 class="text-lg font-semibold text-strong-blue mt-2"> 
