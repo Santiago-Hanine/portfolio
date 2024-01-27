@@ -40,8 +40,8 @@ export const Contact = () => {
             <div className='w-10'>
             <img src={copyIcon} alt='Copy Icon'/>
             </div>
-        <ToastContainer />
         </button>
+        <ToastContainer />
         </div>
     </div>
   );
