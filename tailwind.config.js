@@ -45,6 +45,8 @@ export default {
       'kanit': ['Kanit', 'sans-serif']
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
 
