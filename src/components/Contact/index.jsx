@@ -1,42 +1,49 @@
-import { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState } from 'react';
+import copyIcon from '../../../public/copy-icon.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Contact = () => {
+  const [email, setEmail] = useState('santihanine@gmail.com');
+  const [isCopied, setIsCopied] = useState(false);
 
-    const form = useRef()
+  const notify = () => toast.info('Email copied to clipboard', {
+    position: "bottom-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    });;
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_qxby7vm', 'template_ph7rewu', form.current, 'GCKojGqkdba6UAjIM')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-      };
+  const handleCopyClick = () => {
+    notify();
+    navigator.clipboard.writeText(email);
+    setIsCopied(true);
+
+    // Reset the copied state after 3 seconds
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 3000);
+  };
 
   return (
-    <div id='contact' className="pb-20 lg:py-24 flex flex-col items-center max-w-[90%] lg:max-w-[70%] lg:pl-28 justify-center mx-auto">
-        <h2 className="uppercase text-center font-kanit tracking-wider text-white text-5xl md:text-6xl relative after:absolute after:bottom-[-40px] after:w-16 after:h-[8px] after:translate-x-[-50%] after:left-[50%] after:bg-strong-blue after:rounded-lg mb-20">Contact</h2>
-        <p className="text-center text-white text-lg font-kanit max-w-[70%] mx-auto mb-12">Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-    
-        <form ref={form} onSubmit={sendEmail} className="md:w-3/4 w-full flex flex-col bg-skill-card p-8 rounded-lg gap-4">
-            <div>
-                <label className="text-white text-lg tracking-wider font-kanit" htmlFor="name">Name</label>
-                <input required className="bg-skill-card text-white outline-none outline-offset-0 p-6 rounded-lg font-kanit text-lg w-full mt-2" type="text" name="name" placeholder="Enter Your Name" />
-            </div>
-            <div>
-                <label className="text-white text-lg tracking-wider font-kanit" htmlFor="email">Email</label>
-                <input required className="bg-skill-card text-white outline-none outline-offset-0 p-6 rounded-lg font-kanit text-lg w-full mt-2" type="email" name="email" placeholder="Enter Your Email" />
-            </div>
-            <div>
-                <label className="text-white text-lg tracking-wider font-kanit" htmlFor="message">Message</label>
-                <textarea required className="bg-skill-card text-white outline-none outline-offset-0 p-6 rounded-lg font-kanit text-lg w-full mt-2" name="message" rows="7" placeholder="Enter Your Message"></textarea>
-            </div>
+    <div id='contact' className='flex flex-col justify-center items-center space-y-14 bg-skill-card py-14'>
+        <h2 className='text-center md:text-6xl text-5xl tracking-wider text-white font-kanit uppercase'>Contact</h2>
+        
+        <div className='flex justify-center gap-x-12 w-full'>
+            <a id="contact" className='border-2 rounded-xl p-4 text-lg md:text-xl border-white text-white transition duration-500 hover:border-strong-blue hover:text-strong-blue' href={`mailto:${email}`}>{email}</a>
 
-            <button type="submit" className="bg-strong-blue text-white w-full md:w-1/3 px-8 py-4 rounded-lg">Submit</button>
-        </form>
+        <button onClick={handleCopyClick} disabled={isCopied}>
+            <div className='w-10'>
+            <img src={copyIcon} alt='Copy Icon'/>
+            </div>
+        <ToastContainer />
+        </button>
+        </div>
     </div>
-  )
-}
+  );
+};
+
