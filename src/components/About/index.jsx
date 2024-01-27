@@ -27,7 +27,7 @@ export const About = () => {
                 <p className="text-white lg:w-full font-kanit text-lg leading-7">
                 I'm a <span className="text-strong-blue">Frontend Web Developer</span>  building the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the <span className="text-strong-blue">Projects</span> section.</p>
                 <p className="text-white lg:w-full font-kanit text-lg leading-7">
-                    My coding arsenal includes a diverse set of tools and languages, but my true superpower lies in turning concepts into captivating user experiences. From HTML to CSS, JavaScript and React to Php, I'm constantly learning and evolving to stay at the forefront of web development trends.
+                    My coding arsenal includes a <span className="text-strong-blue"> diverse set of tools and languages</span>, but my true superpower lies in turning concepts into captivating user experiences. I'm constantly learning and evolving to stay at the forefront of web development trends.
                 </p>
 
                 <a href="#contact" className="cursor-pointer text-center uppercase font-kanit tracking-wider bg-strong-blue w-36 h-13 text-white py-3 rounded-lg text-lg ">
@@ -50,14 +50,9 @@ export const About = () => {
                 </div>
                     {showDescription &&
                          <div 
-                         
-
                             className="bg-skill-card w-full h-max p-3 relative">
                             <h3 className={`text-strong-blue font-kanit text-2xl`}>{saveSkill.name}</h3>
                             <p className="text-white font-kanit text-lg pb-4">{saveSkill.description}</p>
-                            <p className="text-white font-kanit text-sm pb-2">Experience: {saveSkill.experience == 1 ? '1 Year' : '2 Years'}</p>
-                            <div className={`${saveSkill.experience == 2 ? 'bg-green-500 w-3/4' : 'bg-orange-500 w-2/4'} absolute bottom-3 h-1`}>
-                            </div>
                             <div onClick={() => setShowDescription(false)} className=" cursor-pointer absolute top-2 right-2">
                                 <RxCross2 className="aboslute text-strong-blue h-8 w-8"/>
                             </div>
