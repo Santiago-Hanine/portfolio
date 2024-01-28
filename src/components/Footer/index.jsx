@@ -15,14 +15,16 @@ export const Footer = () => {
 
         <div className='flex flex-col gap-2'>
           <h2 className='text-white font-kanit tracking-widest text-lg lg:text-2xl uppercase'>Social</h2>
+          
           <div className='flex gap-4'>
-          <a target='_blank' href="https://github.com/Santiago-Hanine">
-                  <AiFillGithub className='fill-white w-10 h-10 '/>
-                  </a>
-                  <a href="https://linkedin.com/in/santiago-hanine/">
-                      <AiFillLinkedin className='fill-white w-10 h-10'/>
-                  </a>
+              <a target='_blank' href="https://github.com/Santiago-Hanine">
+                <AiFillGithub className='fill-white w-10 h-10 '/>
+              </a>
+              <a target='_blank' href="https://linkedin.com/in/santiago-hanine/">
+                <AiFillLinkedin className='fill-white w-10 h-10'/>
+              </a>
           </div>
+          
         </div>
       </div>
 
