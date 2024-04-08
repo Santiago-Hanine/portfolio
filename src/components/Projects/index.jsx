@@ -12,7 +12,7 @@ export const Projects = () => {
         <div className="mt-28 flex flex-col gap-20">
             {ProjectList().map((project, index) => (
               <div key={index} className={`flex flex-col gap-14 ${index % 2 == 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center`}>
-                  <img onClick={()=> console.log(index)} className='lg:w-3/6 w-full max-h-[600px] object-cover' src={project.img} alt={project.name} />
+                  <img className='lg:w-3/6 w-full max-h-[600px] object-cover rounded-3xl' src={project.img} alt={project.name} />
                   <div className="flex flex-col items-center lg:items-start gap-6 bg-skill-card p-4 w-full">
                       <h2 className="text-white text-3xl lg:text-4xl font-kanit">{project.name}</h2>
                       <p className="font-kanit lg:text-lg text-base text-center lg:text-left text-white w-full">{project.description}</p> 

@@ -10,7 +10,6 @@ export const Header = () => {
 
 
   useEffect(() => {
-
     window.addEventListener('scroll', function (e) {
       setCurrentScrollPosition(window.scrollY)
       //Subtract the two and conclude
@@ -25,35 +24,30 @@ export const Header = () => {
     });
   }, [currentScrollPosition]);
 
+  isOpen && (document.body.style.overflow = 'hidden');
+  !isOpen && (document.body.style.overflow = 'auto');
+
   return (
     <div
       className={`lg:hidden w-screen fixed top-0 z-10 h-20 transition-all duration-500 transform ${
-        scrolled ? 'bg-gray-500 animate-menuAppear' : 'animate-menuDisappear'
+        scrolled ? "bg-gray-500 animate-menuAppear" : "animate-menuDisappear"
       }`}
     >
-      <h2
-      className={`${scrolled ? '' : 'hidden'} text-xl tracking-wider font-kanit absolute left-9 top-7`}
-      >
-        Santiago Hanine
-      </h2>
-      <FiMenu
-        className={`${scrolled ? '' : 'hidden'} text-black absolute right-8 top-4 h-12 w-12 z-50`}
-        onClick={() => setIsOpen(!isOpen)}
-      />
+      <h2 className={`${scrolled ? "" : "hidden"} text-xl tracking-wider font-kanit absolute left-9 top-7`}>Santiago Hanine</h2>
+      <FiMenu className={`${scrolled ? "" : "hidden"} text-black absolute right-8 top-4 h-12 w-12 z-50`} onClick={() => setIsOpen(!isOpen)} />
 
       {isOpen && (
         <div className="bg-gray-500">
-
           <div
-            className={`absolute top-[40px] mt-4 right-0 pr-10 p-2 w-full ${
-              isOpen ? 'block' : 'hidden'
+            className={`absolute transfrom top-[40px] mt-4 right-0 pr-10 p-2 w-full ${
+              isOpen ? "block h-screen" : "hidden"
             } text-right bg-gray-500 z-10`}
           >
             {HeaderItems().map((item) => (
               <div className="w-full" key={item.name}>
                 <a
                   onClick={() => setIsOpen(!isOpen)}
-                  className={`text-black ${scrolled ? 'text-black' : 'text-white'} font-kanit text-2xl flex flex-col my-5 text-right`}
+                  className={`text-black ${scrolled ? "text-black" : "text-white"} font-kanit text-4xl md:text-2xl flex flex-col my-5 text-right`}
                   href={item.link}
                 >
                   {item.name}
