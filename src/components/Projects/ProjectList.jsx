@@ -16,11 +16,11 @@ const projects = [
     link: "https://github.com/Santiago-Hanine/middleman-branding",
   },
   {
-    name: "Shopi",
+    name: "Compleet labs",
     description:
-      "I created a Shop Ecommerce where you can shop for a wide range of products with ease and speed. Enjoy a modern, responsive, and intuitive shopping experience.",
-    img: "./Shopi.webp",
-    link: "https://github.com/Santiago-Hanine/Shop-Ecommerce",
+      "I created a simple landing page for a fictional company called compleet labs. The website is built with Vite and Tailwind CSS, and it is fully responsive and mobile-friendly.",
+    img: "./compleet-labs.png",
+    link: "https://github.com/Santiago-Hanine/DOMO",
   },
 ];
 
