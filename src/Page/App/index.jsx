@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <div className='bg-black-bg '>
+      <div className='bg-black-bg overflow-hidden'>
         <Home />
       </div>
     </>

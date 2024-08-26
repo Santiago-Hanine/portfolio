@@ -13,11 +13,13 @@ export const Home = () => {
     <>
     <Sidebar />
     <Header/>
+	<main className="w-full overflow-hidden">
         <Presentation/>
         <Experience />
         <About/>
         <Projects/>
         <Contact/>
+	</main>
     <Footer/>
     </>
   )
